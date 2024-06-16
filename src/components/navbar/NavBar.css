@@ -1,0 +1,62 @@
+nav {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  background-color: var(--cl-light-sky-blue);
+  width: 100vw;
+  height: 80px;
+  padding: 1rem;
+  position: absolute; /* To overlap the on top of the other elements */
+  z-index: 1000;
+
+  color: var(--cl-text-obsidian);
+}
+
+nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px dashed blue;
+}
+nav .logo > * {
+  text-decoration: none;
+  color: var(--cl-text-obsidian);
+}
+
+nav .nav-items {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px dashed green
+}
+nav .nav-items ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  border: 1px dashed red;
+  gap: 1rem;
+}
+nav .nav-items ul > * {
+  text-decoration: none;
+  color: var(--cl-text-obsidian);
+}
+
+nav .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px dashed red;
+}
+nav .contact button {
+  background-color: var(--cl-light-gray);
+  padding: 0.5rem 1rem;
+  border: none;
+  color: var(--cl-text-obsidian);
+}
