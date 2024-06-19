@@ -3,13 +3,15 @@ nav {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 4fr 1fr;
   background-color: var(--cl-light-sky-blue);
-  width: 100vw;
+  width: calc(100vw - 4rem);
   height: 80px;
   padding: 1rem;
   position: absolute; /* To overlap the on top of the other elements */
   z-index: 1000;
+  margin: 1rem 1.5rem;
 
   color: var(--cl-text-obsidian);
+  border: 1px dashed yellow;
 }
 
 nav .logo {
@@ -18,6 +20,14 @@ nav .logo {
   align-items: center;
 
   border: 1px dashed blue;
+}
+nav .logo {
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  transition: all 0.4s linear 0s;
+}
+nav .logo:hover {
+  transform: scale(1.04);
 }
 nav .logo > * {
   text-decoration: none;
@@ -30,6 +40,7 @@ nav .nav-items {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.1rem;
 
   border: 1px dashed green
 }
@@ -42,16 +53,33 @@ nav .nav-items ul {
   border: 1px dashed red;
   gap: 1rem;
 }
-nav .nav-items ul > * {
+nav .nav-items ul li {
+  transition: all 0.2s linear 0s;
+}
+nav .nav-items ul li:hover {
+  transform: scale(1.04);
+}
+nav .nav-items ul li > * {
   text-decoration: none;
   color: var(--cl-text-obsidian);
+  transition: all 0.4s linear 0s;
+}
+nav .nav-items ul li > *:hover {
+  color: var(--cl-deep-teal);
+}
+
+.contact {
+  --btn-letter-spacing: .1rem;
+  --btn-animation-duration: 1.2s;
+  --hover-btn-color: var(--cl-deep-teal);
+  --font-family: Menlo,Roboto Mono,monospace;
 }
 
 nav .contact {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   border: 1px dashed red;
 }
 nav .contact button {
@@ -59,4 +87,124 @@ nav .contact button {
   padding: 0.5rem 1rem;
   border: none;
   color: var(--cl-text-obsidian);
+  cursor: pointer;
+  letter-spacing: var(--btn-letter-spacing);
+  transition: all 0.4s linear 0s;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 1.2rem;
+  /* border-radius: 1.5rem; */
+}
+nav .contact button:hover {
+  background-color: var(--cl-soft-mint-green);
+  transform: scale(1.1);
+}
+.contact button::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+}
+.contact:hover, .contact:focus {
+  background: transparent;
+}
+.contact:hover button, .contact:focus button {
+  color: var(--hover-btn-color);
+}
+.contact:hover button::before, .contact:focus button::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".";
+  }
+
+  10% {
+    content: "^{";
+  }
+
+  15% {
+    content: "-!";
+  }
+
+  20% {
+    content: "#$_";
+  }
+
+  25% {
+    content: "№:0";
+  }
+
+  30% {
+    content: "#{+.";
+  }
+
+  35% {
+    content: "@}-?";
+  }
+
+  40% {
+    content: "?{4@%";
+  }
+
+  45% {
+    content: "=.,^!";
+  }
+
+  50% {
+    content: "?2@%";
+  }
+
+  55% {
+    content: "\;1}]";
+  }
+
+  60% {
+    content: "?{%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+
+  90% {
+    content: "4";
+    right: 0;
+  }
+
+  95% {
+    content: "2";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
 }
