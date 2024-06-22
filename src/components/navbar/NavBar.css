@@ -114,6 +114,9 @@ nav .contact button:hover {
   animation: chitchat linear both var(--btn-animation-duration);
 }
 
+/* Dropdown menu */
+
+
 @keyframes chitchat {
   0% {
     content: "#";
@@ -207,4 +210,8 @@ nav .contact button:hover {
     content: "";
     right: 0;
   }
+}
+
+@media only screen and (max-width: 900px) {
+
 }

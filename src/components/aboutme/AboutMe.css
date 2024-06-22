@@ -1,5 +1,10 @@
+.landing-container {
+  position: relative;
+  height: auto;
+}
+
 .about-me {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -13,6 +18,64 @@ main aside {
   color: var(--cl-text-obsidian);
 
   border: 1px dashed blue;
+}
+
+.about-me .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  height: max(50%, 300px);
+  align-self: center;
+  margin-top: calc(80px + 2rem);
+
+  border: 1px dashed green;
+}
+.about-me .description h1 {
+  font-size: 2.5rem;
+  font-weight: var(--fw-black);
+  color: var(--cl-deep-teal);
+  width: min(90%, 600px);
+}
+.about-me .description h2 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  width: min(90%, 600px);
+}
+.about-me .description p {
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+  color: var(--cl-text-obsidian);
+  width: min(90%, 600px);
+  margin-top: 1rem;
+
+  border: 1px dashed yellow;
+}
+
+.social_icons {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: min(90%, 600px);
+
+  border: 1px dashed red;
+  position: relative;
+  z-index: 1;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem; 
+  height: 2.5rem; 
+  border-radius: 50%;
+  box-shadow: 0px 0.125rem 0.3125rem 0px rgba(0, 0, 0, 0.25); /* changed from 0px 2px 5px 0px rgba(0, 0, 0, 0.25) */
+  cursor: pointer;
 }
 
 /* main aside .code-container .code-line {
@@ -32,54 +95,106 @@ main aside .code-container .comment {
   color: #75715e;
 } */
 
-main section {
+.about-me .pp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  border: 1px dashed yellow;
+}
+
+.about-me .profile-picture {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  height: 350px;
+  width: 350px;
+  margin-top: calc(80px + 2rem);
 
   border: 1px dashed red;
 }
-
 main section img {
+  position: relative;
   height: 350px;
   width: auto;
   object-fit: cover;
   border-radius: 45% 55% 23% 77% / 79% 47% 53% 21%;
   animation: imgFloat 7s ease-in-out infinite;
+  z-index: 3; /* Ensure the image is on top */
 }
-
-main section div {
+main section .image-border1,
+main section .image-border2 {
   position: absolute;
-  top: 26%;
-  background-color: var(--cl-light-sky-blue);
-  height: 350px;
-  width: 350px;
-  object-fit: cover;
+  height: 350px; /* Slightly larger than the image */
+  width: 350px; /* Slightly larger than the image */
   border-radius: 45% 55% 23% 77% / 79% 47% 53% 21%;
   animation: imgFloat 8s ease-in-out infinite;
+  z-index: 1; /* Ensure borders are below the image */
 }
-
-main section .image-border {
-  position: absolute;
-  top: 24%;
+main section .image-border1 {
+  background-color: var(--cl-light-sky-blue);
+  z-index: 2; /* Ensure it is between image and the second border */
+}
+main section .image-border2 {
   background-color: var(--cl-deep-teal);
-  height: 350px;
-  width: 350px;
-  object-fit: cover;
-  border-radius: 45% 55% 23% 77% / 79% 47% 53% 21%;
   animation: imgFloat 7.5s ease-in-out infinite;
+  z-index: 1; /* Ensure it is at the bottom */
+}
+@keyframes imgFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .wave {
   position: absolute;
   bottom: 0;
+  z-index: 0;
 }
-
 
 @keyframes imgFloat {
   50% {
     transform: translateY(10px);
     border-radius: 45% 55% 45% 55%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .about-me .description {
+    margin-top: 2rem;
+  }
+  .about-me .profile-picture {
+    margin-top: 2rem;
+  }
+  .about-me .description h1 {
+    font-size: 2rem;
+  }
+  .about-me .description h2 {
+    font-size: 1.25rem;
+  }
+  .about-me .description p {
+    font-size: 0.9rem;
+  }
+  .social_icons {
+    margin-top: 0.5rem;
+  }
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  main section img {
+    height: 300px;
+  }
+  main section .image-border1,
+  main section .image-border2 {
+    height: 300px;
+    width: 300px;
   }
 }

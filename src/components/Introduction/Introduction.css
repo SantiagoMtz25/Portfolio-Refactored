@@ -16,6 +16,8 @@
   gap: 0.5rem; 
 }
 
+
+
 .introduction .introduction-text {
   display: flex;
   flex-direction: column;
@@ -34,3 +36,5 @@
 
   border: 1px dashed yellow;
 }
+
+
