@@ -14,9 +14,88 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem; 
+  position: relative;
+
+  border: 2px dashed red;
 }
 
+.introduction .icon-grid .first-image {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 50%;
+  height: 50%;
+  background-image: url('src/assets/image2.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem
+}
 
+.introduction .icon-grid .second-image {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  width: 50%;
+  height: 50%;
+  background-image: url('src/assets/image1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem
+}
+
+.introduction .icon-grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  color: var(--cl-text-obsidian);
+  background-color: var(--cl-light-gray);
+}
+
+.introduction .icon-grid .react-icon {
+  background-color: var(--cl-light-sky-blue);
+  position: absolute;
+  top: 2%;
+  left: 40%;
+  width: 75px;
+  height: 75px;
+  z-index: 100;
+  border-radius: 1rem;
+}
+
+.introduction .icon-grid .creativity-icon {
+  background-color: var(--cl-deep-teal);
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  width: 70px;
+  height: 70px;
+  z-index: 100;
+  border-radius: 1rem;
+}
+
+.introduction .icon-grid .music-icon {
+  background-color: var(--cl-light-gray);
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  width: 80px;
+  height: 80px;
+  z-index: 100;
+  border-radius: 1rem;
+}
+
+.introduction .icon-grid .gym-icon {
+  background-color: var(--cl-light-sky-blue);
+  position: absolute;
+  bottom: 28%;
+  left: 4%;
+  width: 85px;
+  height: 85px;
+  z-index: 100;
+  border-radius: 1rem;
+}
 
 .introduction .introduction-text {
   display: flex;
