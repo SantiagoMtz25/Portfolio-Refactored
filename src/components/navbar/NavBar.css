@@ -3,33 +3,35 @@ nav {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 4fr 1fr;
   background-color: var(--cl-light-sky-blue);
-  width: calc(100vw - 4rem);
+  width: calc(100vw - 3rem);
   height: 80px;
   padding: 1rem;
-  position: absolute; /* To overlap the on top of the other elements */
+  position: absolute;
   z-index: 1000;
   margin: 1rem 1.5rem;
-
   color: var(--cl-text-obsidian);
-  border: 1px dashed yellow;
+  /* border: 1px dashed yellow; */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 nav .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  border: 1px dashed blue;
+  /* border: 1px dashed blue; */
 }
+
 nav .logo {
   font-size: 2rem;
   font-weight: var(--fw-bold);
   transition: all 0.4s linear 0s;
 }
+
 nav .logo:hover {
   transform: scale(1.04);
 }
-nav .logo > * {
+
+nav .logo>* {
   text-decoration: none;
   color: var(--cl-text-obsidian);
 }
@@ -41,30 +43,34 @@ nav .nav-items {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-
-  border: 1px dashed green
+  /* border: 1px dashed green; */
 }
+
 nav .nav-items ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   list-style: none;
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
   gap: 1rem;
 }
+
 nav .nav-items ul li {
   transition: all 0.2s linear 0s;
 }
+
 nav .nav-items ul li:hover {
   transform: scale(1.04);
 }
-nav .nav-items ul li > * {
+
+nav .nav-items ul li>* {
   text-decoration: none;
   color: var(--cl-text-obsidian);
   transition: all 0.4s linear 0s;
 }
-nav .nav-items ul li > *:hover {
+
+nav .nav-items ul li>*:hover {
   color: var(--cl-deep-teal);
 }
 
@@ -72,16 +78,16 @@ nav .nav-items ul li > *:hover {
   --btn-letter-spacing: .1rem;
   --btn-animation-duration: 1.2s;
   --hover-btn-color: var(--cl-deep-teal);
-  --font-family: Menlo,Roboto Mono,monospace;
+  --font-family: Menlo, Roboto Mono, monospace;
 }
 
 nav .contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
 }
+
 nav .contact button {
   background-color: var(--cl-light-gray);
   padding: 0.5rem 1rem;
@@ -93,125 +99,88 @@ nav .contact button {
   box-sizing: border-box;
   position: relative;
   font-size: 1.2rem;
-  /* border-radius: 1.5rem; */
 }
+
 nav .contact button:hover {
   background-color: var(--cl-soft-mint-green);
   transform: scale(1.1);
 }
+
 .contact button::before {
   box-sizing: border-box;
   position: absolute;
   content: "";
 }
-.contact:hover, .contact:focus {
+
+.contact:hover,
+.contact:focus {
   background: transparent;
 }
-.contact:hover button, .contact:focus button {
+
+.contact:hover button,
+.contact:focus button {
   color: var(--hover-btn-color);
 }
-.contact:hover button::before, .contact:focus button::before {
+
+.contact:hover button::before,
+.contact:focus button::before {
   animation: chitchat linear both var(--btn-animation-duration);
 }
 
 /* Dropdown menu */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--cl-light-gray);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dropdown ul li {
+  padding: 12px 16px;
+}
+.dropdown ul li:hover {
+  background-color: var(--cl-soft-mint-green);
 
-
-@keyframes chitchat {
-  0% {
-    content: "#";
-  }
-
-  5% {
-    content: ".";
-  }
-
-  10% {
-    content: "^{";
-  }
-
-  15% {
-    content: "-!";
-  }
-
-  20% {
-    content: "#$_";
-  }
-
-  25% {
-    content: "№:0";
-  }
-
-  30% {
-    content: "#{+.";
-  }
-
-  35% {
-    content: "@}-?";
-  }
-
-  40% {
-    content: "?{4@%";
-  }
-
-  45% {
-    content: "=.,^!";
-  }
-
-  50% {
-    content: "?2@%";
-  }
-
-  55% {
-    content: "\;1}]";
-  }
-
-  60% {
-    content: "?{%:%";
-    right: 0;
-  }
-
-  65% {
-    content: "|{f[4";
-    right: 0;
-  }
-
-  70% {
-    content: "{4%0%";
-    right: 0;
-  }
-
-  75% {
-    content: "'1_0<";
-    right: 0;
-  }
-
-  80% {
-    content: "{0%";
-    right: 0;
-  }
-
-  85% {
-    content: "]>'";
-    right: 0;
-  }
-
-  90% {
-    content: "4";
-    right: 0;
-  }
-
-  95% {
-    content: "2";
-    right: 0;
-  }
-
-  100% {
-    content: "";
-    right: 0;
-  }
+}
+.dropdown ul li a {
+  text-decoration: none;
+  color: var(--cl-text-obsidian);
+  display: block;
 }
 
-@media only screen and (max-width: 900px) {
+/* Keyframes for button animation */
+@keyframes chitchat {
+  0% { content: "#"; }
+  5% { content: "."; }
+  10% { content: "^{"; }
+  15% { content: "-!"; }
+  20% { content: "#$_"; }
+  25% { content: "№:0"; }
+  30% { content: "#{+."; }
+  35% { content: "@}-?"; }
+  40% { content: "?{4@%"; }
+  45% { content: "=.,^!"; }
+  50% { content: "?2@%"; }
+  55% { content: "\\;1}]"; }
+  60% { content: "?{%:%"; right: 0; }
+  65% { content: "|{f[4"; right: 0; }
+  70% { content: "{4%0%"; right: 0; }
+  75% { content: "'1_0<"; right: 0; }
+  80% { content: "{0%"; right: 0; }
+  85% { content: "]>'"; right: 0; }
+  90% { content: "4"; right: 0; }
+  95% { content: "2"; right: 0; }
+  100% { content: ""; right: 0; }
+}
 
+@media only screen and (max-width: 1000px) {
+  header nav .nav-items ul {
+    display: none;
+  }
 }

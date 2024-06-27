@@ -1,0 +1,167 @@
+.experience {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: var(--cl-light-gray);
+  color: var(--cl-text-obsidian);
+}
+
+.title-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 7.5rem;
+  text-align: left;
+  align-self: center;
+}
+.title-header:first-of-type {
+  margin-top: calc(80px + 2rem);
+}
+.title-header .title-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.title-header .title-container h1:first-of-type {
+  position: absolute;
+  top: 3%;
+  font-size: 2rem;
+  font-weight: var(--fw-black);
+  color: var(--cl-deep-teal);
+}
+.title-header .title-container h1:last-of-type {
+  font-size: 4rem;
+  font-weight: var(--fw-black);
+  color: var(--cl-text-obsidian);
+  opacity: 0.2;
+}
+.title-header .line-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.title-header .line-container .short-line {
+  border: 2px solid var(--cl-deep-teal);
+  width: 100px;
+}
+.title-header .line-container .long-line {
+  border: 1px solid var(--cl-text-obsidian);
+  width: 250px;
+  opacity: 0.3;
+}
+
+.skills-description {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - (80px + 7.5rem + 2rem));
+}
+
+.skills-description .skills-text {
+  justify-self: center;
+  max-width: 90%;
+  padding: 1rem 1rem 1rem 7.5rem;
+}
+.skills-description .skills-text h2 {
+  font-size: 1.8rem;
+  font-weight: var(--fw-black);
+  color: var(--cl-deep-teal);
+}
+.skills-description .skills-text p {
+  font-size: 1.2rem;
+  font-weight: var(--fw-light);
+  color: var(--cl-text-obsidian);
+}
+.skills-description .skills-list {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  width: min(90%, 500px);
+}
+
+@media only screen and (max-width: 1200px) {
+  .skills-description .skills-text {
+    padding: 1rem 1rem 1rem 4rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .skills-description .skills-text {
+    padding: 1rem 1rem 1rem 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .skills-description .skills-text {
+    padding: 1rem;
+  }
+}
+
+.work {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding: 1rem 1rem;
+  gap: 1rem;
+}
+
+.experience .values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - (80px + 7.5rem + 2rem));
+  padding: 1rem 1rem 1rem 0rem;
+  gap: 1rem;
+}
+.experience .values .values-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  justify-self: center;
+  width: min(90%, 500px);
+  min-height: 100%;
+  padding: 1rem;
+}
+.experience .values .values-description h3 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-semi-bold);
+}
+.experience .values .values-description h1 {
+  font-size: 2rem;
+  font-weight: var(--fw-black);
+  color: var(--cl-deep-teal);
+}
+.experience .values .values-description p {
+  font-size: 1.2rem;
+  font-weight: var(--fw-light);
+  color: var(--cl-text-obsidian);
+  margin-top: 2rem;
+}
+.experience .values .dropdown-values {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}

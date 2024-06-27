@@ -15,9 +15,8 @@
           display: block;
       }
   }
-  width: min(90%, 600px);
-
-  border: 1px dashed orange;
+  width: min(90%, 500px);
+  /* border: 1px dashed orange; */
 }
 
 .flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }

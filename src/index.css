@@ -21,7 +21,8 @@
   --cl-light-gray: #E2E2E2;
 
   /* Font colors */
-  --cl-text-obsidian: #0B1215; /* Instead of using pure black */
+  --cl-text-obsidian: #0B1215;
+  /* Instead of using pure black */
   --cl-text-lava-black: #352f36;
 
   /* Font family with fallbacks */
@@ -62,4 +63,13 @@ body {
   padding: 0;
 }
 
-
+/* Hide scrollbar in Chrome */
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* optional: just to ensure the scrollbar is invisible */
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
+}

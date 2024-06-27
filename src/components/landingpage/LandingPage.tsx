@@ -1,8 +1,8 @@
-import { Suspense, lazy, useState, useEffect } from 'react';
+import { Suspense, lazy, useState, useEffect, useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 const AboutMe = lazy(() => import('../aboutme/AboutMe'));
 const NavBar = lazy(() => import('../navbar/NavBar'));
-const Introduction = lazy(() => import('../Introduction/Introduction'));
+const Introduction = lazy(() => import('../introduction/Introduction'));
 const Footer = lazy(() => import('../footer/Footer'));
 const ContactMe = lazy(() => import('../contact/ContactMe'));
 import './LandingPage.css';
@@ -20,10 +20,12 @@ const LandingPage = () => {
     }
   }, []);
 
+  const contactRef = useRef<HTMLDivElement>(null);
+
   return (
     <div className="landing-page">
       <Suspense fallback={<div>Loading...</div>}>
-        <Toaster 
+        <Toaster
           position="bottom-center"
           reverseOrder={false}
           toastOptions={{
@@ -31,10 +33,12 @@ const LandingPage = () => {
           }}
           gutter={8}
         />
-        <NavBar />
+        <NavBar contactRef={contactRef} />
         <AboutMe />
         <Introduction />
-        <ContactMe />
+        <div ref={contactRef}>
+          <ContactMe />
+        </div>
         <Footer />
       </Suspense>
     </div>
