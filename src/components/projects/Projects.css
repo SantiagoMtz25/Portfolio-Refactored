@@ -1,0 +1,188 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: var(--cl-light-gray);
+  color: var(--cl-text-obsidian);
+}
+
+.projects .main-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: min(90%, 1120px);
+  min-height: 7.5rem;
+  text-align: left;
+  align-self: center;
+  margin-top: calc(80px + 2rem + 2rem);
+}
+
+.projects .main-projects h1 {
+  font-size: 3.5rem;
+  font-weight: var(--fw-extra-bold);
+  background: #3F3F3F;
+  background: linear-gradient(to right, #3F3F3F 0%, var(--cl-light-sky-blue) 33%, var(--cl-deep-teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.projects .main-projects p {
+  margin-block: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: var(--fw-regular);
+  color: var(--cl-text-obsidian);
+  opacity: 0.7;
+  width: min(90%, 800px);
+  align-self: flex-start;
+}
+
+.projects .grid-projects {
+  max-width: min(90%, 1120px);
+  height: repeat(19, 75px);
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(12, 75px);
+  grid-template-rows: repeat(19, 75px);
+  gap: 1.25rem;
+}
+
+.projects .grid-projects>*:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 7;
+  grid-column-start: 7;
+  grid-column-end: 13;
+}
+
+.projects .grid-projects>*:nth-child(2) {
+  grid-row-start: 5;
+  grid-row-end: 12;
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+.projects .grid-projects>*:nth-child(3) {
+  grid-row-start: 14;
+  grid-row-end: 20;
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+.projects .grid-projects>*:nth-child(4) {
+  grid-row-start: 12;
+  grid-row-end: 18;
+  grid-column-start: 7;
+  grid-column-end: 13;
+}
+
+
+.projects .future-projects {
+  width: min(90%, 1120px);
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+
+.projects .future-projects h1 {
+  font-size: 2.5rem;
+  font-weight: var(--fw-extra-bold);
+  background: #3F3F3F;
+  background: linear-gradient(to right, #3F3F3F 0%, var(--cl-light-sky-blue) 33%, var(--cl-deep-teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.projects .future-projects p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: var(--fw-regular);
+  color: var(--cl-text-obsidian);
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 1300px) {
+  .projects .grid-projects {
+    grid-template-columns: repeat(12, 55px);
+    grid-template-rows: repeat(19, 55px);
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .projects .main-projects {
+    width: 90%;
+    border: 1px dashed red;
+  }
+  .projects .main-projects > * {
+    text-align: center;
+  }
+  .projects .main-projects h1 {
+    width: 100%;
+    font-size: 2.5rem;
+  }
+  .projects .main-projects p {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .projects .grid-projects {
+    grid-template-columns: repeat(12, 40px);
+    grid-template-rows: repeat(19, 40px);
+  }
+  .projects .future-projects h1 {
+    font-size: 2rem;
+  }
+  .projects .future-projects p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .projects .grid-projects {
+    height: auto;
+    grid-template-columns: repeat(6, 50px);
+    grid-template-rows: repeat(25, 50px);
+  }
+  .projects .grid-projects>*:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+  .projects .grid-projects>*:nth-child(2) {
+    grid-row-start: 7;
+    grid-row-end: 13;
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+  .projects .grid-projects>*:nth-child(3) {
+    grid-row-start: 13;
+    grid-row-end: 19;
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+  .projects .grid-projects>*:nth-child(4) {
+    grid-row-start: 19;
+    grid-row-end: 26;
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projects .main-projects h1 {
+    font-size: 2rem;
+  }
+  .projects .main-projects p {
+    font-size: 1rem;
+  }
+  .projects .grid-projects {
+    height: auto;
+    grid-template-columns: repeat(6, 35px);
+    grid-template-rows: repeat(25, 35px);
+  }
+}

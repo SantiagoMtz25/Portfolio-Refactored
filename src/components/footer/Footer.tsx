@@ -1,4 +1,5 @@
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -13,13 +14,13 @@ const Footer = () => {
 
         <div className="row">
           <ul>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Music</a></li>
-            <li><a href="#">Workout</a></li>
-            <li><a href="#">Movies & Series</a></li>
-            <li><a href="#">Books</a></li>
-            <li><a href="#">Writing</a></li>
+            <li><Link to="/experience">Experience</Link></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/music">Music</Link></li>
+            <li><Link to="/workout">Workout</Link></li>
+            <li><Link to="/movies-series">Movies & Series</Link></li>
+            <li><Link to="/books">Books</Link></li>
+            <li><Link to="/writing">Writing</Link></li>
           </ul>
         </div>
 

@@ -1,0 +1,60 @@
+.future-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: min(100%, 750px);
+  height: auto;
+  align-self: center;
+  margin-top: 2rem;
+  text-align: justify;
+}
+.future-card:last-of-type {
+  margin-top: 2rem;
+  flex-direction: row-reverse;
+}
+
+.future-card .future-icons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+.future-card .future-icons i:first-of-type {
+  font-size: 50px;
+  color: var(--cl-text-lava-black);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.future-card .future-icons i:last-of-type {
+  font-size: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.future-card .future-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  margin: 0 1rem;
+}
+.future-card .future-text h2 {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+}
+.future-card .future-text p {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: var(--fw-light);
+  color: var(--cl-text-lava-black);
+  opacity: 0.7;
+}

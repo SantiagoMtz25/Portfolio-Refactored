@@ -1,7 +1,7 @@
+import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Fallback from './components/fallback/Fallback';
-import './App.css';
 const LandingPage = lazy(() => import('./components/landingpage/LandingPage'));
 const Experience = lazy(() => import('./components/experience/Experience'));
 const Projects = lazy(() => import('./components/projects/Projects'));
