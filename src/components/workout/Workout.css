@@ -7,10 +7,6 @@
   color: var(--cl-text-obsidian);
 }
 
-.workout .workout-container {
-
-}
-
 .first-image {
   position: relative;
   width: auto;
@@ -63,7 +59,20 @@
 }
 
 .workout .timeline {
-  
+  width: 100%;
+  height: auto;
+  display: grid;
+  place-content: center;
+  position: relative;
+  z-index: 102;
+}
+.workout .timeline .wave7 {
+  position: absolute;
+  top: -1%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
 }
 
 .workout .image-gallery {
@@ -71,6 +80,7 @@
   height: 100vh;
   display: grid;
   place-content: center;
+  position: relative;
 }
 
 .workout .video-container {
@@ -92,6 +102,14 @@
 .last-image .wave3 {
   position: absolute;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+}
+.last-image .wave8 {
+  position: absolute;
+  top: -1%;
   left: 0;
   width: 100%;
   height: auto;
