@@ -68,7 +68,7 @@
 }
 .workout .timeline .wave7 {
   position: absolute;
-  top: -1%;
+  top: -1px;
   left: 0;
   width: 100%;
   height: auto;
@@ -109,10 +109,25 @@
 }
 .last-image .wave8 {
   position: absolute;
-  top: -1%;
+  top: -1px;
   left: 0;
   width: 100%;
   height: auto;
   z-index: 100;
 }
 
+.date-text {
+  margin-inline: 2rem;
+  font-size: 1.5rem;
+}
+.vertical-timeline-element--education {
+  text-align: justify;
+}
+.vertical-timeline-element--education img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-position: top;
+  border-radius: 1rem;
+  margin-top: 1rem;
+} 

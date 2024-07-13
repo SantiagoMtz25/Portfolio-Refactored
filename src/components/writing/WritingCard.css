@@ -1,0 +1,47 @@
+/* WritingCard.css */
+
+.writing-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px; /* Set a fixed height for the card */
+  background-color: var(--cl-light-gray);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+.writing-card:hover {
+  transform: scale(1.02);
+}
+
+.writing-card-image {
+  height: 50%; /* Image container occupies half of the card height */
+}
+
+.writing-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.writing-card .writing-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  padding: 1rem;
+  color: var(--cl-text-lava-black);
+  height: 50%; 
+}
+.writing-card .writing-content .writing-card-title {
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+}
+
+.writing-card .writing-content .writing-card-description {
+  font-size: 1.1rem;
+}
+.writing-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
