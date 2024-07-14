@@ -5,6 +5,7 @@ const NavBar = lazy(() => import('../navbar/NavBar'));
 const Introduction = lazy(() => import('../introduction/Introduction'));
 const Footer = lazy(() => import('../footer/Footer'));
 const ContactMe = lazy(() => import('../contact/ContactMe'));
+const CookiesCard = lazy(() => import('./CookiesCard'));
 import './LandingPage.css';
 
 const LandingPage = () => {

@@ -41,7 +41,7 @@
 .writing-image .title h1 {
   width: min(90%, 1300px);
   margin-top: 1rem;
-  letter-spacing: 0.125rem;
+  letter-spacing: 0.25rem;
   font-size: 2rem;
   font-weight: var(--fw-bold);
   color: white;
@@ -56,17 +56,44 @@
   margin-bottom: 1rem;
 }
 
-.writing .writing-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  align-self: center;
-  gap: 1rem;
+.writing-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   width: min(90%, 1300px);
-  height: auto;
+  align-self: center;
+  position: relative;
+}
+.writing-card {
+  flex: 1 1 calc(33.333% - 20px);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  z-index: 1;
 }
 
-.writing .writing-cards > * {
-
+.writing-card.expanded {
+  grid-column: span 3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
+.reorganized .writing-card:not(.expanded) {
+  grid-column: span 3;
+}
 
+.writing-card-content button {
+  background-color: var(--cl-deep-teal);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+}
+.writing-card-content button:hover {
+  background-color: var(--cl-light-sky-blue);
+}

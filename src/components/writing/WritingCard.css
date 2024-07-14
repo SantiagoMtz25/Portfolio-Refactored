@@ -1,47 +1,70 @@
 /* WritingCard.css */
-
-.writing-card {
+.ind-writing-card {
   display: flex;
   flex-direction: column;
-  min-height: 400px; /* Set a fixed height for the card */
+  justify-content: space-between;
   background-color: var(--cl-light-gray);
-  border-radius: 8px;
   overflow: hidden;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  min-height: 450px;
 }
-.writing-card:hover {
-  transform: scale(1.02);
+.ind-writing-card.expanded {
+  height: auto; /* Allow height to adjust when expanded */
+  border-radius: 0.5rem 0.5rem 0.5rem 0rem;
 }
 
-.writing-card-image {
-  height: 50%; /* Image container occupies half of the card height */
+.ind-writing-card .writing-card-image {
+  flex: 0 0 200px; /* Fixed height for image */
+  overflow: hidden;
 }
-
-.writing-card-image img {
+.ind-writing-card .writing-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.writing-card .writing-content {
+.ind-writing-card .writing-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: space-between;
+  align-items: flex-start;
   padding: 1rem;
   color: var(--cl-text-lava-black);
-  height: 50%; 
+  gap: 1rem;
+  overflow: hidden; /* Prevent content overflow */
+  flex: 1;
 }
-.writing-card .writing-content .writing-card-title {
-  font-size: 1.2rem;
-  font-weight: var(--fw-bold);
+.ind-writing-card .writing-content.expanded {
+  width: min(90%, 800px);
+  align-self: center;
+  text-align: justify;
+  overflow: auto; /* Allow scrolling when expanded */
+}
+.ind-writing-card .writing-content.expanded .writing-card-title {
+  font-size: 1.5rem;
+}
+.ind-writing-card .writing-content.expanded .writing-card-description {
+  font-size: 1.3rem;
+  white-space: pre-wrap; /* Use pre-wrap to keep line breaks */
+}
+.ind-writing-card .writing-content.expanded .writing-card-bottom {
+  font-size: 1.3rem;
 }
 
-.writing-card .writing-content .writing-card-description {
+.ind-writing-card .writing-content .writing-card-title {
+  font-size: 1.2rem;
+}
+
+.ind-writing-card .writing-content .writing-card-description {
   font-size: 1.1rem;
 }
+
 .writing-card-bottom {
   display: flex;
   justify-content: space-between;
   font-size: 1.1rem;
+  width: 100%;
+  font-weight: var(--fw-semi-bold);
 }
