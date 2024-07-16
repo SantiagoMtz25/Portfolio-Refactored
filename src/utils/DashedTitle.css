@@ -1,0 +1,78 @@
+@function stripes() {
+  $shadows: ();
+  
+  @for $i from 0 through 1000 {
+    $color: '';
+    
+    @if($i % 2 == 0) {
+      $color: #000;
+    }
+    @else {
+      $color: #fff;
+    }
+    
+    $shadow: 0 #{$i * 3}px 0 $color;
+    $shadows: append($shadows, $shadow, comma);
+  }
+  
+  @return $shadows;
+}
+
+.text {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  line-height: 1;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+  
+  span {
+    display: block;
+    font-size: 8rem;
+    font-weight: 900;
+    
+    &:first-of-type {
+      font-size: 15rem;
+    }
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    margin: 0 0 1.5rem;
+  }
+}
+
+.text--top {
+  color: #fff;
+  z-index: 3;
+  
+  span {
+    transform: translate(-10px, -10px);  
+  }
+}
+
+.text--knockout {
+  background: #000;
+  color: #fff;
+  mix-blend-mode: multiply;
+  z-index: 2;
+}
+
+.stripes {
+  font-size: 8rem;
+  left: calc(50%);
+  position: absolute;
+  text-shadow: stripes();
+  top: -500px;
+  transform: scaleX(100) skewY(89deg);
+  z-index: 1;
+}

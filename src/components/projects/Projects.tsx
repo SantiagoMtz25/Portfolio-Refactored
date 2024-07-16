@@ -21,7 +21,7 @@ const Projects = () => {
         <ProjectCard
           title='1. Chatbot Application'
           description='Web app to manage assistance and support to Neoris users, page is controlled by admin users, integrated 
-with a fine-tuned chatbot to answer questions, functionalities to manage account, and response notifications.'
+with a fine-tuned chatbot to answer questions, functionalities to manage account, and real time notifications.'
           date='Feb 2024 - Jun 2024'
           imageLocation='src\assets\chatbot.png'
         />
@@ -42,7 +42,7 @@ in PHP"
         />
         <ProjectCard
           title='3. Arduino Connected to Cloud'
-          description='Sensor connected to cloud with Firebase, could be activated or deactivated remotely through a webpage 
+          description='Door sensor connected to cloud with Firebase, could be activated or deactivated remotely through a webpage 
 and assistant Alexa. Sensor’s activity was stored in MySQL'
           date='Sep 2022 - Dec 2022'
           imageLocation='src\assets\Pruebas_arduino.jpeg'

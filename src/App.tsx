@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Fallback from './components/fallback/Fallback';
 const LandingPage = lazy(() => import('./components/landingpage/LandingPage'));
@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Suspense fallback={<Fallback />}>
           <Routes>
-            <Route path='/fallback' element={<Fallback />} />
+            {/* <Route path='/fallback' element={<Fallback />} /> */}
             <Route path="/" element={<LandingPage />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
@@ -26,6 +26,7 @@ function App() {
             <Route path="/movies-series" element={<MoviesSeries />} />
             <Route path="/books" element={<Books />} />
             <Route path="/writing" element={<Writing />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

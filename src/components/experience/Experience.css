@@ -75,13 +75,13 @@
   padding: 1rem 1rem 1rem 7.5rem;
 }
 .skills-description .skills-text h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: var(--fw-black);
   color: var(--cl-deep-teal);
 }
 .skills-description .skills-text p {
-  font-size: 1.2rem;
-  font-weight: var(--fw-light);
+  font-size: 1.3rem;
+  font-weight: var(--fw-regular);
   color: var(--cl-text-obsidian);
 }
 .skills-description .skills-list {
@@ -153,7 +153,7 @@
 }
 .experience .values .values-description p {
   font-size: 1.2rem;
-  font-weight: var(--fw-light);
+  font-weight: var(--fw-regular);
   color: var(--cl-text-obsidian);
   margin-top: 2rem;
 }

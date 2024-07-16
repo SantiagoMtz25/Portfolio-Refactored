@@ -34,7 +34,7 @@
 }
 
 .project-card .project-card-desc .project-card-header h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: var(--fw-extra-bold);
   color: var(--cl-text-obsidian);
 }
@@ -46,10 +46,14 @@
 }
 
 .project-card .project-card-desc .project-card-header p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: var(--fw-regular);
   color: var(--cl-text-obsidian);
   opacity: 0.7;
+}
+
+.project-card .project-card-desc .project-card-info {
+  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -70,10 +74,10 @@
 }
 @media only screen and (max-width: 800px) {
   .project-card .project-card-desc .project-card-header h2 {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
   .project-card .project-card-desc .project-card-header p {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 }
 

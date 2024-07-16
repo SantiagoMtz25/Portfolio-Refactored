@@ -30,15 +30,19 @@
   display: inline-block;
   margin: 0rem 1.875rem;
   transition: all 0.4s linear 0s;
+  font-size: 1.3rem;
 }
 .footer .row ul li:hover {
   transform: scale(1.05);
 }
 
-
 .footer .row a i {
-  font-size: 2em;
+  font-size: 3.5em;
   margin: 0% 1%;
+}
+
+.footer .row:last-of-type {
+  font-size: 1.2rem;
 }
 
 @media (max-width:720px) {

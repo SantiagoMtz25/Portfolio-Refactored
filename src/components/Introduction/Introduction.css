@@ -4,7 +4,6 @@
   height: 100vh;
   width: 100%;
   background-color: var(--cl-soft-mint-green);
-  /* border: 1px dashed blue;	 */
 }
 
 .introduction .icon-grid {
@@ -15,7 +14,6 @@
   align-items: center;
   gap: 0.5rem; 
   position: relative;
-  /* border: 2px dashed red; */
 }
 .introduction .icon-grid .first-image {
   position: absolute;
@@ -94,17 +92,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  
-  /* border: 1px dashed green; */
+  gap: 1rem;  
+}
+.introduction .introduction-text span {
+  font-size: 3.3rem;
 }
 .introduction .introduction-text .introduction-paragraph {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: var(--fw-ligth);
   color: var(--cl-text-obsidian);
   width: min(90%, 500px);
   text-align: left;
-  /* border: 1px dashed yellow; */
 }
 
 @media only screen and (max-width: 900px) {

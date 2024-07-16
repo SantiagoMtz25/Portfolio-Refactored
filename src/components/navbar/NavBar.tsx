@@ -28,7 +28,7 @@ const NavBar: React.FC<NavBarProps> = ({ contactRef }) => {
   const screenSize = useScreenSize();
 
   useEffect(() => {
-    if (screenSize.width < 1000) {
+    if (screenSize.width < 1122) {
       setShowNav(true);
     } else {
       setShowNav(false);
@@ -71,10 +71,9 @@ const NavBar: React.FC<NavBarProps> = ({ contactRef }) => {
             <>
               {allowDownload ? (
                 <>
-                  <button>Download CV</button>
-                  {/* <a href="/resume.pdf" download>
+                  <a href="/resume.pdf" download>
                     <button>Download CV</button>
-                  </a> */}
+                  </a>
                 </>
               ) : (
                 <>
@@ -96,7 +95,7 @@ const NavBar: React.FC<NavBarProps> = ({ contactRef }) => {
                     <li><Link to="/writing">Writing</Link></li>
                     {allowDownload ? (
                       <>
-                      <li><a>Download CV</a></li>
+                      <li><a href='/src/assets/Resume Santiago Martinez Vallejo.pdf' download>Download CV</a></li>
                       </>
                     ) : (
                       <>

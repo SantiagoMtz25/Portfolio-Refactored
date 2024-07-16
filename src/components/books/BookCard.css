@@ -1,0 +1,24 @@
+.article-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--cl-light-gray);
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.article-wrapper figure {
+  flex: 0 0 200px;
+  overflow: hidden;
+}
+.article-wrapper figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-wrapper .article-body {
+  
+}

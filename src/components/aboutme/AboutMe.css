@@ -32,18 +32,18 @@ main aside {
   /* border: 1px dashed green; */
 }
 .about-me .description h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: var(--fw-black);
   color: var(--cl-deep-teal);
   width: min(90%, 600px);
 }
 .about-me .description h2 {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: var(--fw-bold);
   width: min(90%, 600px);
 }
 .about-me .description p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: var(--fw-regular);
   color: var(--cl-text-obsidian);
   width: min(90%, 600px);
@@ -67,11 +67,14 @@ main aside {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2.5rem; 
-  height: 2.5rem; 
+  width: 3rem; 
+  height: 3rem; 
   border-radius: 50%;
   box-shadow: 0px 0.125rem 0.3125rem 0px rgba(0, 0, 0, 0.25); /* changed from 0px 2px 5px 0px rgba(0, 0, 0, 0.25) */
   cursor: pointer;
+}
+.icon i {
+  font-size: 1.5rem;
 }
 
 /* main aside .code-container .code-line {
@@ -106,14 +109,14 @@ main aside .code-container .comment {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 350px;
-  width: 350px;
+  height: 400px;
+  width: 400px;
   margin-top: calc(80px + 2rem);
   /* border: 1px dashed red; */
 }
 main section img {
   position: relative;
-  height: 350px;
+  height: 400px;
   width: auto;
   object-fit: cover;
   border-radius: 45% 55% 23% 77% / 79% 47% 53% 21%;
@@ -123,8 +126,8 @@ main section img {
 main section .image-border1,
 main section .image-border2 {
   position: absolute;
-  height: 350px; /* Slightly larger than the image */
-  width: 350px; /* Slightly larger than the image */
+  height: 400px; /* Slightly larger than the image */
+  width: 400px; /* Slightly larger than the image */
   border-radius: 45% 55% 23% 77% / 79% 47% 53% 21%;
   animation: imgFloat 8s ease-in-out infinite;
   z-index: 1; /* Ensure borders are below the image */
@@ -184,32 +187,16 @@ main section .image-border2 {
     height: 2rem;
   }
   main section img {
-    height: 300px;
+    height: 330px;
   }
   main section .image-border1,
   main section .image-border2 {
-    height: 300px;
-    width: 300px;
+    height: 330px;
+    width: 330px;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .about-me .profile-picture {
-    height: 250px;
-    width: 250px;
-    margin-top: 1rem;
-  }
-  main section img {
-    height: 250px;
-  }
-  main section .image-border1,
-  main section .image-border2 {
-    height: 250px;
-    width: 250px;
-  }
-}
-
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
   .about-me {
     min-height: 100vh;
     width: 100%;
@@ -229,16 +216,16 @@ main section .image-border2 {
     margin-top: calc(80px + 2rem);
   }
   .about-me .profile-picture {
-    height: 260px;
-    width: 260px;
+    height: 300px;
+    width: 300px;
     margin-top: 0rem;
   }
   main section img {
-    height: 260px;
+    height: 300px;
   }
   main section .image-border1,
   main section .image-border2 {
-    height: 260px;
-    width: 260px;
+    height: 300px;
+    width: 300px;
   }
 }

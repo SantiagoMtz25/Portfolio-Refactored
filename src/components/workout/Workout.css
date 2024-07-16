@@ -66,6 +66,22 @@
   position: relative;
   z-index: 102;
 }
+.vertical-timeline-element--education h3 {
+  font-size: 2rem;
+  font-weight: var(--fw-medium);
+  color: var(--cl-text-obsidian);
+}
+.vertical-timeline-element--education h4 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-light);
+  color: var(--cl-text-obsidian);
+
+}
+.vertical-timeline-element--education p {
+  font-size: 1.2rem;
+  font-weight: var(--fw-light);
+  color: var(--cl-text-obsidian);
+}
 .workout .timeline .wave7 {
   position: absolute;
   top: -1px;

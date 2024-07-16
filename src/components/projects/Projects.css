@@ -31,7 +31,7 @@
 
 .projects .main-projects p {
   margin-block: 1.8rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: var(--fw-regular);
   color: var(--cl-text-obsidian);
   opacity: 0.7;
@@ -89,7 +89,7 @@
 }
 
 .projects .future-projects h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: var(--fw-extra-bold);
   background: #3F3F3F;
   background: linear-gradient(to right, #3F3F3F 0%, var(--cl-light-sky-blue) 33%, var(--cl-deep-teal) 100%);
@@ -100,7 +100,7 @@
 
 .projects .future-projects p {
   margin-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: var(--fw-regular);
   color: var(--cl-text-obsidian);
   opacity: 0.7;
