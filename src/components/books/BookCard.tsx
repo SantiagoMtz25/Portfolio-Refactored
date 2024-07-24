@@ -1,29 +1,52 @@
+import { useState } from 'react';
 import './BookCard.css';
 
 type BookCardProps = {
   title: string;
   author: string;
   description: string;
+  shortReview: string;
+  image: string;
+  categories: string[];
 }
 
-const BookCard: React.FC<BookCardProps> = ({ title, author, description }) => {
+const BookCard: React.FC<BookCardProps> = ({ title, author, description, shortReview, image, categories }) => {
+  const [showBack, setShowBack] = useState(false);
+
+  const handleShowBack = () => {
+    setShowBack(!showBack);
+  }
+
   return (
-    <div className="article-wrapper">
-      <figure>
-        <img src="https://picsum.photos/id/1011/800/450" alt="" />
-      </figure>
-      <div className="article-body">
-        <h2>{title}</h2>
-        <h3>{author}</h3>
-        <p>{description}</p>
-        <a href="#" className="read-more">
-          Read full review<span className="sr-only"></span>
-          <svg xmlns="http://www.w3.org/2000/svg" className="icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
+    showBack ? (
+      <div className="article-wrapper">
+        <div className="article-body">
+          <div className="body-review">
+            <h2>More about the book</h2>
+            <p>{shortReview}</p>
+          </div>
+          <div className="read-more">
+            <p>Go back</p>
+            <i className="fa-solid fa-arrow-left" onClick={handleShowBack}></i>
+          </div>
+        </div>
       </div>
-    </div>
+    ) : (
+      <div className="article-wrapper">
+        <figure>
+          <img src={image} alt={title} />
+        </figure>
+        <div className="article-body">
+          <h2>{title}</h2>
+          <h3>{author}</h3>
+          <p>{description}</p>
+          <div className="read-more">
+            <p>Read more</p>
+            <i className="fa-solid fa-arrow-right" onClick={handleShowBack}></i>
+          </div>
+        </div>
+      </div>
+    )
   );
 }
 

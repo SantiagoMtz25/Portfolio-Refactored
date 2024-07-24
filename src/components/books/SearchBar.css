@@ -6,14 +6,12 @@
   border-radius: 0.625rem;
   width: min(90%, 1100px);
   align-self: center;
-
 }
 
 .filters-container {
   display: flex;
   gap: 0.625rem;
   flex-grow: 1;
-  padding-left: 0.625rem;
 }
 
 .input,

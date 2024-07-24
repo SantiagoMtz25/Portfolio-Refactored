@@ -1,20 +1,29 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import './SearchBar.css';
 
-const SearchBar = () => {
+type SearchBarProps = {
+  onSearch: (category: string, searchTerm: string) => void;
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   const [category, setCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
+
+  useEffect(() => {
+    onSearch(category, searchTerm);
+  }, [category, searchTerm]);
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setCategory(e.target.value);
   }
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
-    throw new Error('Function not implemented.');
+    setSearchTerm(event.target.value);
   }
 
-  const handleSearch = (event: React.MouseEvent<HTMLButtonElement>): void => {
-    throw new Error('Function not implemented.');
+  const handleReset = () => {
+    setCategory('all');
+    setSearchTerm('');
   }
 
   return (
@@ -22,25 +31,27 @@ const SearchBar = () => {
       <div className="filters-container">
         <select className="select" value={category} onChange={handleCategoryChange}>
           <option value="all">Categories</option>
-          <option value="category1">Antroposofía</option>
-          <option value="category2">Religión</option>
-          <option value="category3">Filosofía</option>
-          <option value="category4">Ciencia</option>
-          <option value="category5">Arte</option>
-          <option value="category6">Política</option>
-          <option value="category7">Economía</option>
-          <option value="category8">Sociedad</option>
-          <option value="category10">Tecnología</option>
-          <option value="category11">Amor</option>
+          <option value="Antroposofía">Antroposofía</option>
+          <option value="Religión">Religión</option>
+          <option value="Filosofía">Filosofía</option>
+          <option value="Ciencia">Ciencia</option>
+          <option value="Arte">Arte</option>
+          <option value="Política">Política</option>
+          <option value="Economía">Economía</option>
+          <option value="Sociedad">Sociedad</option>
+          <option value="Tecnología">Tecnología</option>
+          <option value="Amor">Amor</option>
+          <option value="Desarrollo Personal">Desarrollo Personal</option>
+          <option value="Espiritualidad">Espiritualidad</option>
         </select>
         <input
           type="text"
-          placeholder="Search by books title..."
+          placeholder="Search by book title..."
           value={searchTerm}
           onChange={handleInputChange}
           className="input"
         />
-        <button className="button" onClick={handleSearch}>Search</button>
+        <button className="button" onClick={handleReset}>Reset Search</button>
       </div>
     </div>
   );

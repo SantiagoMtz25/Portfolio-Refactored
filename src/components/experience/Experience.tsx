@@ -37,9 +37,9 @@ const Experience = () => {
           <ProgressLine label="TypeScript" visualParts={[{ percentage: "75%", color: '#19747E' }]} />
           <ProgressLine label="React" visualParts={[{ percentage: "70%", color: '#19747E' }]} />
           <ProgressLine label="Node.js" visualParts={[{ percentage: "65%", color: '#19747E' }]} />
-          <ProgressLine label="Kotlin" visualParts={[{ percentage: "55%", color: '#19747E' }]} />
-          <ProgressLine label="Flutter" visualParts={[{ percentage: "35%", color: '#19747E' }]} />
-          <ProgressLine label="Django" visualParts={[{ percentage: "15%", color: '#19747E' }]} />
+          <ProgressLine label="Kotlin" visualParts={[{ percentage: "50%", color: '#19747E' }]} />
+          <ProgressLine label="Flutter" visualParts={[{ percentage: "15%", color: '#19747E' }]} />
+          <ProgressLine label="Django" visualParts={[{ percentage: "10%", color: '#19747E' }]} />
         </div>
       </div>
       <TitleHeader title='Work' bgTitle='Work' />

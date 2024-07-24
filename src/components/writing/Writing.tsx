@@ -4,6 +4,7 @@ import NavBar from "../navbar/NavBar";
 import Title from "./Title";
 import "./Writing.css";
 import WritingCard from "./WritingCard";
+import { read } from 'fs';
 
 const Writing = () => {
   const [expandedCardIndex, setExpandedCardIndex] = useState<number | null>(null);
@@ -119,7 +120,14 @@ Para ti con cariño, un guerrero atento.
       image: "src/assets/lost.jpg",
       date: "November 3, 2023",
       readTime: "5 min read",
-    },
+    },/* 
+    {
+      title: "El Poder de la Palabra",
+      description: ``,
+      image: "src/assets/words.jpg",
+      date: "",
+      readTime: "5 min read",
+    }, */
   ];
 
   return (

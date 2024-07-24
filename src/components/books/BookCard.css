@@ -20,5 +20,35 @@
 }
 
 .article-wrapper .article-body {
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  color: var(--cl-text-lava-black);
+  gap: 1rem;
+  overflow: hidden;
+  /* Prevent content overflow */
+  flex: 1;
+}
+
+.article-wrapper {
+  flex: 1 1 calc(33.333% - 20px);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  z-index: 1;
+}
+.article-wrapper .article-body .read-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.article-wrapper .article-body .read-more i {
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out 0s;
+}
+.article-wrapper .article-body .read-more i:hover {
+  color: var(--cl-deep-teal);
+  transform: scale(1.2);
 }
