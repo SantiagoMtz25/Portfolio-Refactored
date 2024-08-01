@@ -37,6 +37,8 @@
   text-align: center;
   line-height: 1.5;
   width: 90%;
+  white-space: pre-wrap;
+  padding-top: calc(80px + 2rem);;
 }
 
 .wave10 {
@@ -77,5 +79,6 @@
   font-weight: var(--fw-medium);
   color: var(--cl-text-obsidian);
   line-height: 1.5;
+  text-align: center;
 }
 
