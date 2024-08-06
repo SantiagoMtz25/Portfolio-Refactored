@@ -10,7 +10,7 @@ type BookCardProps = {
   categories: string[];
 }
 
-const BookCard: React.FC<BookCardProps> = ({ title, author, description, shortReview, image, categories }) => {
+const BookCard: React.FC<BookCardProps> = ({ title, author, description, shortReview, image }) => {
   const [showBack, setShowBack] = useState(false);
 
   const handleShowBack = () => {

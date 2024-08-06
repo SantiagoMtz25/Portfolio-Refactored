@@ -4,7 +4,6 @@ import NavBar from "../navbar/NavBar";
 import Title from "./Title";
 import "./Writing.css";
 import WritingCard from "./WritingCard";
-import { read } from 'fs';
 
 const Writing = () => {
   const [expandedCardIndex, setExpandedCardIndex] = useState<number | null>(null);
