@@ -7,7 +7,7 @@ const Experience = lazy(() => import('./components/experience/Experience'));
 const Projects = lazy(() => import('./components/projects/Projects'));
 const Workout = lazy(() => import('./components/workout/Workout'));
 const Music = lazy(() => import('./components/music/Music'));
-const MoviesSeries = lazy(() => import('./components/movies-series/MoviesSeries'));
+const Gift = lazy(() => import('./components/movies-series/Gift'));
 const Writing = lazy(() => import('./components/writing/Writing'));
 const Books = lazy(() => import('./components/books/Books'));
 
@@ -23,9 +23,9 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/music" element={<Music />} />
             <Route path="/workout" element={<Workout />} />
-            <Route path="/movies-series" element={<MoviesSeries />} />
             <Route path="/books" element={<Books />} />
             <Route path="/writing" element={<Writing />} />
+            <Route path="/movies-series" element={<Gift />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Suspense>

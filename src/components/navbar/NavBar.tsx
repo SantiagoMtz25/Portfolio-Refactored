@@ -56,13 +56,13 @@ const NavBar: React.FC<NavBarProps> = ({ contactRef }) => {
               <Link to="/workout">Workout</Link>
             </li>
             <li>
-              <Link to="/movies-series">Movies & Series</Link>
-            </li>
-            <li>
               <Link to="/books">Books</Link>
             </li>
             <li>
               <Link to="/writing">Writing</Link>
+            </li>
+            <li>
+              <Link to="/movies-series">Gift</Link>
             </li>
           </ul>
         </div>
@@ -90,9 +90,9 @@ const NavBar: React.FC<NavBarProps> = ({ contactRef }) => {
                     <li><Link to="/projects">Projects</Link></li>
                     <li><Link to="/music">Music</Link></li>
                     <li><Link to="/workout">Workout</Link></li>
-                    <li><Link to="/movies-series">Movies & Series</Link></li>
                     <li><Link to="/books">Books</Link></li>
                     <li><Link to="/writing">Writing</Link></li>
+                    <li><Link to="/movies-series">Gift</Link></li>
                     {allowDownload ? (
                       <>
                       <li><a href='/src/assets/Resume Santiago Martinez Vallejo.pdf' download>Download CV</a></li>
