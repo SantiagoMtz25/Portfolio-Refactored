@@ -9,8 +9,8 @@ const Gift = () => {
       <div className="gift-container">
         <h1>Hun Yuang Ling Tong</h1>
         <p>
-          If something I can share with someone is ZhìNéng science I has
-          transformed mine and my fimily lives. I am shure it will in yours
+          If something I can share with someone is ZhìNéng science it has
+          transformed mine and my fimily lives. I am shure it will transform yours
         </p>
         <LinkButton content="Dicover"/>
       </div>

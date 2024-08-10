@@ -21,7 +21,7 @@ const Books = () => {
       author: 'Robin Sharma',
       description: 'Un libro que te enseña a vivir una vida con propósito y significado.',
       shortReview: 'Here will go a short review of the book.',
-      image: 'src/assets/monje.jpg',
+      image: 'public/assets/monje.jpg',
       categories: ['Desarrollo Personal', 'Espiritualidad']
     },
     {
@@ -29,7 +29,7 @@ const Books = () => {
       author: 'Carlos Casteñeda',
       description: 'Un libro que te enseña a ver el mundo desde una perspectiva diferente.',
       shortReview: 'Here will go a short review of the book.',
-      image: 'src/assets/okiwave.jpg',
+      image: 'public/assets/okiwave.jpg',
       categories: ['Antroposofía', 'Espiritualidad']
     },
     {
@@ -37,7 +37,7 @@ const Books = () => {
       author: 'Carlos G. Vallés',
       description: 'Un libro que te enseña a conocer y a cuidar tus sentidos.',
       shortReview: 'Here will go a short review of the book.',
-      image: 'src/assets/sentidos.jpg',
+      image: 'public/assets/sentidos.jpg',
       categories: ['Filosofía', 'Antroposofía', 'Desarrollo Personal']
     }
   ]);
@@ -63,7 +63,7 @@ const Books = () => {
       <NavBar />
       <div className="books-header">
         <div className="books-image">
-          <img src='src/assets/thumb-1920-1014821.png' alt='books' />
+          <img src='public/assets/thumb-1920-1014821.png' alt='books' />
           <div className="gradient gradient1"></div>
           <div className="gradient gradient2"></div>
         </div>
@@ -73,7 +73,7 @@ const Books = () => {
           <h2>- El Monje que Vendió su Ferrari</h2>
         </div>
       </div>
-      <img className='wave9' src='src/assets/wave (9).svg' alt='wave' />
+      <img className='wave9' src='public/assets/wave (9).svg' alt='wave' />
       <SearchBar onSearch={handleSearch} />
       <div className="cards-container">
         {filteredBooks.length > 0 ? (
@@ -92,7 +92,7 @@ const Books = () => {
           <div className="no-results">No books found.</div>
         )}
       </div>
-      <img className='wave3' src='src/assets/wave (5).svg' alt='wave' />
+      <img className='wave3' src='public/assets/wave (5).svg' alt='wave' />
       <Footer />
     </div>
   );

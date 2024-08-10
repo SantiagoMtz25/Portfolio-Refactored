@@ -1,9 +1,10 @@
-import { useState, useId } from 'react';
+import { useState, useId, useEffect } from 'react';
 import Footer from "../footer/Footer";
 import NavBar from "../navbar/NavBar";
 import Title from "./Title";
 import "./Writing.css";
 import WritingCard from "./WritingCard";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Writing = () => {
   const [expandedCardIndex, setExpandedCardIndex] = useState<number | null>(null);
@@ -33,7 +34,7 @@ Todo lo mejor y solo lo mejor.
 Santiago Martínez.
 
 `,
-      image: "src/assets/okinawa.jpg",
+      image: "public/assets/okinawa.jpg",
       date: "November 5, 2023",
       readTime: "5 min read",
     },
@@ -60,7 +61,7 @@ El tiempo pasa con rapidez,
 Sobre mi cabeza el cielo infinito.
 
 `,
-      image: "src/assets/lone.jpg",
+      image: "public/assets/lone.jpg",
       date: "September 27, 2023",
       readTime: "5 min read",
     },
@@ -83,7 +84,7 @@ Para ese niño que sigue jugando a aventarse bellotas como perdigones con su pad
 Para ti con cariño, un guerrero atento.
 
 `,
-      image: "src/assets/snoopy.jpg",
+      image: "public/assets/snoopy.jpg",
       date: "September 17, 2023",
       readTime: "5 min read",
     },
@@ -116,7 +117,7 @@ Para ti con cariño, un guerrero atento.
 - Vi a dos personas con carne en una caja. Una de San Juan y la otra de la Ramos, San Juan es mejor, irrebatible. Actualización, volví a ver a alguien con carne San Juan, resultado fianl San Juan 2 - Ramos 1.
 
 `,
-      image: "src/assets/lost.jpg",
+      image: "public/assets/lost.jpg",
       date: "November 3, 2023",
       readTime: "5 min read",
     },/* 
@@ -129,12 +130,32 @@ Para ti con cariño, un guerrero atento.
     }, */
   ];
 
+  const [showToast, setShowToast] = useState(() => {
+    return localStorage.getItem('showToast') === 'true';
+  });
+
+  useEffect(() => {
+    if (!showToast) {
+      toast.success("To open o close a card, click anywhere on it.");
+      localStorage.setItem('showToast', 'true');
+      setShowToast(true);
+    }
+  }, []);
+
   return (
     <div className="writing">
+      <Toaster 
+        position="bottom-center"
+        reverseOrder={false}
+        toastOptions={{
+          duration: 5000,
+        }}
+        gutter={8}
+      />
       <NavBar />
       <div className="writing-title">
         <div className="writing-image">
-          <img src='src/assets/writing.jpg' alt='writing' />
+          <img src='public/assets/writing.jpg' alt='writing' />
           <div className="title">
             <Title title="Thoughts" subtitle="in words" />
             <h1>Sometimes words do can express how we feel</h1>
@@ -178,7 +199,7 @@ Para ti con cariño, un guerrero atento.
           </div>
         )}
       </div>
-      <img className='wave3' src='src/assets/wave (5).svg' alt='wave' />
+      <img className='wave3' src='public/assets/wave (5).svg' alt='wave' />
       <Footer />
     </div>
   );

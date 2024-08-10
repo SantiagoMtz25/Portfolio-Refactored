@@ -16,7 +16,7 @@ const Workout = () => {
       <NavBar />
       <div className="workout-container">
         <div className="first-image">
-          <img src='src\assets\swimming.jpg' alt='workout1' />
+          <img src='public\assets\swimming.jpg' alt='workout1' />
           <div className="gradient gradient1"></div>
           <div className="gradient gradient2"></div>
           <div className="quote">
@@ -26,7 +26,7 @@ const Workout = () => {
         </div>
       </div>
       <div className="timeline">
-        <img className='wave7' src='src\assets\wave (7).svg' alt='wave' />
+        <img className='wave7' src='public\assets\wave (7).svg' alt='wave' />
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
@@ -50,7 +50,7 @@ const Workout = () => {
               clothes were fitting odly and my aerobic condition and strength were at rock bottom, 
               so I decided to start working out.
             </p>
-            <img src='src\assets\first.jpg' alt='workout1' />
+            <img src='public\assets\first.jpg' alt='workout1' />
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
@@ -73,7 +73,7 @@ const Workout = () => {
               I easily gained weight and strength quickly, however, I got stuck here for a while, 
 |             I was not able to gain more weight or strength, so I decided to change my workout routine.
             </p>
-            <img src='src\assets\second.jpeg' alt='workout2' />
+            <img src='public\assets\second.jpeg' alt='workout2' />
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
@@ -96,7 +96,7 @@ const Workout = () => {
               I started seeing progress by eating more and better, I was gaining weight and strength, 
               Clothes started unfitting, I was feeling more confident and happy with my body.
             </p>
-            <img src='src\assets\workout3.jpeg' alt='workout3' />
+            <img src='public\assets\workout3.jpeg' alt='workout3' />
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
@@ -120,7 +120,7 @@ const Workout = () => {
               however, I was not able to gain more weight or strength, so I decided to 
               settle down and enjoy the results of all the hard work.
             </p>
-            <img src='src\assets\fourth.jpg' alt='workout4' />
+            <img src='public\assets\fourth.jpg' alt='workout4' />
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
@@ -144,7 +144,7 @@ const Workout = () => {
               I fell ill and had to stop working out for a while, it felt like starting from scratch again,
               but I was determined to get back on track.
             </p>
-            <img src='src\assets\fifth.jpg' alt='workout5' />
+            <img src='public\assets\fifth.jpg' alt='workout5' />
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
@@ -168,7 +168,7 @@ const Workout = () => {
               felt again that I reached a peak, I stalled again, but I was not worried about it,
               I was happy with the results and the journey.
             </p>
-            <img src='src\assets\sixth.jpg' alt='workout6' />
+            <img src='public\assets\sixth.jpg' alt='workout6' />
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
@@ -193,7 +193,7 @@ const Workout = () => {
               went to physical therapy and recovered for a few months, in addition to that, 
               I intoxicated myself with water and lost weight and strength again.
             </p>
-            <img src='src\assets\seventh.jpg' alt='workout7' />
+            <img src='public\assets\seventh.jpg' alt='workout7' />
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
@@ -217,7 +217,7 @@ const Workout = () => {
               I returned stronger and more motivated than ever, I was able to gain weight and strength again,
               consistency and patience were key to overcome the challenges and dropbacks.
             </p>
-            <img src='src\assets\eighth.jpg' alt='workout8' />
+            <img src='public\assets\eighth.jpg' alt='workout8' />
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
@@ -243,7 +243,7 @@ const Workout = () => {
               I encourage anyone who is thinking about starting to work out to do it, it's worth it.
               Challenges and dropbacks will come, but the results and the journey are worth it.
             </p>
-            <img src='src\assets\ninth.jpg' alt='workout9' />
+            <img src='public\assets\ninth.jpg' alt='workout9' />
           </VerticalTimelineElement>
           <VerticalTimelineElement
             iconStyle={{ background: "#A9D6E5", color: "#fff" }}
@@ -258,9 +258,9 @@ const Workout = () => {
         
       </div> */}
       <div className="last-image">
-        <img className='wave8' src='src\assets\wave (8).svg' alt='wave' />
-        <img src='src\assets\workout.jpg' alt='workout2' />
-        <img className='wave3' src='src\assets\wave (5).svg' alt='wave' />
+        <img className='wave8' src='public\assets\wave (8).svg' alt='wave' />
+        <img src='public\assets\workout.jpg' alt='workout2' />
+        <img className='wave3' src='public\assets\wave (5).svg' alt='wave' />
       </div>
       <Footer />
     </div>

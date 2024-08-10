@@ -21,7 +21,7 @@ const ContactMe = () => {
   return (
     <>
       <div className="background">
-        <img className='wave2' src='src\assets\wave (6).svg' alt='wave' />
+        <img className='wave2' src='public\assets\wave (6).svg' alt='wave' />
         <div className="container">
           <div className="screen">
             <div className="screen-header">
@@ -95,7 +95,7 @@ const ContactMe = () => {
             </div>
           </div>
         </div>
-        <img className='wave3' src='src\assets\wave (5).svg' alt='wave' />
+        <img className='wave3' src='public\assets\wave (5).svg' alt='wave' />
       </div>
     </>
   );

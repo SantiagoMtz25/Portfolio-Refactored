@@ -1,5 +1,7 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useRef, useState } from 'react';
 import './SearchBar.css';
+import { driver } from "driver.js";
+import "driver.js/dist/driver.css";
 
 type SearchBarProps = {
   onSearch: (category: string, searchTerm: string) => void;
@@ -8,10 +10,30 @@ type SearchBarProps = {
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   const [category, setCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
+  const searchBarRef = useRef<HTMLDivElement>(null);
+  const [driverShown, setDriverShown] = useState<boolean>(() => {
+    return localStorage.getItem('driverShown') === 'true';
+  });
 
   useEffect(() => {
     onSearch(category, searchTerm);
-  }, [category, searchTerm]);
+
+    if (!driverShown) {
+      const driverObj = driver({
+        showProgress: true,
+        steps: [
+          { element: '.select', popover: { title: 'Category', description: 'Select a category you are interested in.' } },
+          { element: '.input', popover: { title: 'Search', description: 'Type what you are looking for.' } },
+          { element: '.button', popover: { title: 'Reset', description: 'Reset the search to view all the posts.' } },
+        ],
+      });
+
+      driverObj.drive();
+
+      localStorage.setItem('driverShown', 'true');
+      setDriverShown(true);
+    }
+  }, [category, searchTerm, driverShown, onSearch]);
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setCategory(e.target.value);
@@ -27,7 +49,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   }
 
   return (
-    <div className="search-bar-container">
+    <div className="search-bar-container" ref={searchBarRef}>
       <div className="filters-container">
         <select className="select" value={category} onChange={handleCategoryChange}>
           <option value="all">Categories</option>

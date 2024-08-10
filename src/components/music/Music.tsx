@@ -199,7 +199,7 @@ Que te despierta el corazón
         <h1 data-aos='zoom-in'>{initialLyrics}</h1>
       </div>
       <div className="music-header"></div>
-      <img className="wave10" src="src\assets\wave (10).svg" alt="wave" />
+      <img className="wave10" src="public\assets\wave (10).svg" alt="wave" />
       <div className="playlists">
         <iframe
           style={{ borderRadius: "12px" }}
@@ -269,7 +269,7 @@ Que te despierta el corazón
           </p>
         ))}
       </div>
-      <img className="wave3" src="src/assets/wave (5).svg" alt="wave" />
+      <img className="wave3" src="public/assets/wave (5).svg" alt="wave" />
       <Footer />
     </div>
   );
