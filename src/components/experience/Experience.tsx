@@ -94,7 +94,7 @@ const Experience = () => {
           />
         </div>
       </div>
-      <img className='wave3' src='public\assets\wave (5).svg' alt='wave' />
+      <img className='wave3' src='src\assets\wave (5).svg' alt='wave' />
       <Footer />
     </div>
   );

@@ -29,11 +29,11 @@ const AboutMe = () => {
           <section className="profile-picture">
             <div className='image-border1'></div>
             <div className='image-border2'></div>
-            <img src='/public/assets/yoyo2.jpeg' alt='profile picture' />
+            <img src='/src/assets/yoyo2.jpeg' alt='profile picture' />
           </section>
         </div>
       </main>
-      <img className='wave' src='/public/assets/wave (1).svg' alt='wave' />
+      <img className='wave' src='/src/assets/wave (1).svg' alt='wave' />
     </div>
   );
 }

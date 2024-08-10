@@ -34,7 +34,7 @@ Todo lo mejor y solo lo mejor.
 Santiago Martínez.
 
 `,
-      image: "public/assets/okinawa.jpg",
+      image: "src/assets/okinawa.jpg",
       date: "November 5, 2023",
       readTime: "5 min read",
     },
@@ -61,7 +61,7 @@ El tiempo pasa con rapidez,
 Sobre mi cabeza el cielo infinito.
 
 `,
-      image: "public/assets/lone.jpg",
+      image: "src/assets/lone.jpg",
       date: "September 27, 2023",
       readTime: "5 min read",
     },
@@ -84,7 +84,7 @@ Para ese niño que sigue jugando a aventarse bellotas como perdigones con su pad
 Para ti con cariño, un guerrero atento.
 
 `,
-      image: "public/assets/snoopy.jpg",
+      image: "src/assets/snoopy.jpg",
       date: "September 17, 2023",
       readTime: "5 min read",
     },
@@ -117,7 +117,7 @@ Para ti con cariño, un guerrero atento.
 - Vi a dos personas con carne en una caja. Una de San Juan y la otra de la Ramos, San Juan es mejor, irrebatible. Actualización, volví a ver a alguien con carne San Juan, resultado fianl San Juan 2 - Ramos 1.
 
 `,
-      image: "public/assets/lost.jpg",
+      image: "src/assets/lost.jpg",
       date: "November 3, 2023",
       readTime: "5 min read",
     },/* 
@@ -155,7 +155,7 @@ Para ti con cariño, un guerrero atento.
       <NavBar />
       <div className="writing-title">
         <div className="writing-image">
-          <img src='public/assets/writing.jpg' alt='writing' />
+          <img src='src/assets/writing.jpg' alt='writing' />
           <div className="title">
             <Title title="Thoughts" subtitle="in words" />
             <h1>Sometimes words do can express how we feel</h1>
@@ -199,7 +199,7 @@ Para ti con cariño, un guerrero atento.
           </div>
         )}
       </div>
-      <img className='wave3' src='public/assets/wave (5).svg' alt='wave' />
+      <img className='wave3' src='src/assets/wave (5).svg' alt='wave' />
       <Footer />
     </div>
   );
