@@ -4,7 +4,7 @@ const AboutMe = lazy(() => import('../aboutme/AboutMe'));
 const NavBar = lazy(() => import('../navbar/NavBar'));
 const Footer = lazy(() => import('../footer/Footer'));
 const ContactMe = lazy(() => import('../contact/ContactMe'));
-const Introduction = lazy(() => import('../introduction/Introduction'));
+const Introduction = lazy(() => import('../introduction/Introduction.tsx'));
 import './LandingPage.css';
 
 const LandingPage = () => {
