@@ -2,9 +2,9 @@ import { Suspense, lazy, useState, useEffect, useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 const AboutMe = lazy(() => import('../aboutme/AboutMe'));
 const NavBar = lazy(() => import('../navbar/NavBar'));
-const Introduction = lazy(() => import('../introduction/Introduction'));
 const Footer = lazy(() => import('../footer/Footer'));
 const ContactMe = lazy(() => import('../contact/ContactMe'));
+const Introduction = lazy(() => import('../introduction/Introduction'));
 import './LandingPage.css';
 
 const LandingPage = () => {
