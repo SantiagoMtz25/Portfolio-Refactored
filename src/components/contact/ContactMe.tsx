@@ -1,6 +1,7 @@
 import "./ContactMe.css";
 import { useState } from "react";
 import axios from "axios";
+import { Toaster, toast } from "react-hot-toast";
 
 interface SubmitContactForm {
   name: string;
@@ -21,7 +22,7 @@ const ContactMe = () => {
     setDisabledSubmit(true);
     try {
       const serverUrl = import.meta.env.VITE_API_URL;
-      const response = await axios.post<SubmitContactForm>(`${serverUrl}/`, {
+      const response = await axios.post<SubmitContactForm>(`${serverUrl}/contact`, {
         name,
         email,
         motive,
@@ -31,6 +32,7 @@ const ContactMe = () => {
       clearForm();
     } catch (error) {
       console.error(error);
+      toast.error("This service is down, please try again later or contact me directly at my email.");
     } finally {
       clearForm();
       setDisabledSubmit(false);
@@ -128,6 +130,10 @@ const ContactMe = () => {
           </div>
         </div>
         <img className="wave3" src="src\assets\wave (5).svg" alt="wave" />
+        <Toaster 
+          position="bottom-center"
+          reverseOrder={false}
+        />
       </div>
     </>
   );
